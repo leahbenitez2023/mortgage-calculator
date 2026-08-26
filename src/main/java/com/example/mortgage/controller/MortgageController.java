@@ -1,6 +1,7 @@
 package com.example.mortgage.controller;
 
 import com.example.mortgage.model.MortgageRequest;
+import com.example.mortgage.model.MortgageResponse;
 import com.example.mortgage.service.MortgageCalculatorService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +19,7 @@ public class MortgageController {
     }
 
     @PostMapping("/calculate")
-    public double calculateMortgage(@RequestBody MortgageRequest request) {
+    public MortgageResponse calculateMortgage(@RequestBody MortgageRequest request) {
         return mortgageCalculatorService.calculateMonthlyPayment((request));
     }
 }
