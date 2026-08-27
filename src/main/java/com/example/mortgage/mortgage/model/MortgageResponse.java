@@ -1,4 +1,4 @@
-package com.example.mortgage.model;
+package com.example.mortgage.mortgage.model;
 
 public record MortgageResponse(
         double loanAmount,

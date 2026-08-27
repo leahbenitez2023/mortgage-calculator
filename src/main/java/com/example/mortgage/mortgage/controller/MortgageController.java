@@ -1,8 +1,8 @@
-package com.example.mortgage.controller;
+package com.example.mortgage.mortgage.controller;
 
-import com.example.mortgage.model.MortgageRequest;
-import com.example.mortgage.model.MortgageResponse;
-import com.example.mortgage.service.MortgageCalculatorService;
+import com.example.mortgage.mortgage.model.MortgageRequest;
+import com.example.mortgage.mortgage.model.MortgageResponse;
+import com.example.mortgage.mortgage.service.MortgageCalculatorService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

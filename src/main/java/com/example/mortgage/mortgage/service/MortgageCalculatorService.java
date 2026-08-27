@@ -1,7 +1,7 @@
-package com.example.mortgage.service;
+package com.example.mortgage.mortgage.service;
 
-import com.example.mortgage.model.MortgageRequest;
-import com.example.mortgage.model.MortgageResponse;
+import com.example.mortgage.mortgage.model.MortgageRequest;
+import com.example.mortgage.mortgage.model.MortgageResponse;
 import org.springframework.stereotype.Service;
 
 @Service

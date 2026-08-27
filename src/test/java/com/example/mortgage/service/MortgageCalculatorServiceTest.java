@@ -1,7 +1,8 @@
 package com.example.mortgage.service;
 
-import com.example.mortgage.model.MortgageRequest;
-import com.example.mortgage.model.MortgageResponse;
+import com.example.mortgage.mortgage.model.MortgageRequest;
+import com.example.mortgage.mortgage.model.MortgageResponse;
+import com.example.mortgage.mortgage.service.MortgageCalculatorService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
