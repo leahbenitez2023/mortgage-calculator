@@ -1,6 +1,7 @@
 package com.example.mortgage.mortgage.model;
 
 public record MortgageResponse(
+        double downPayment,
         double loanAmount,
         double monthlyPrincipalAndInterest,
         double monthlyPmi,

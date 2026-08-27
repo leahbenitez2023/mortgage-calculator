@@ -2,7 +2,9 @@ package com.example.mortgage.savings.service;
 
 import com.example.mortgage.savings.model.SavingsRequest;
 import com.example.mortgage.savings.model.SavingsResponse;
+import org.springframework.stereotype.Service;
 
+@Service
 public class SavingsService {
     public SavingsResponse calculateProjectedSavings(SavingsRequest request) {
         double totalSaved = request.getTotalSaved();

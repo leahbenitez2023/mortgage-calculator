@@ -8,7 +8,8 @@ import org.springframework.stereotype.Service;
 public class MortgageCalculatorService {
     public MortgageResponse calculateMonthlyPayment(MortgageRequest request) {
 
-        double loanAmount = request.getHomePrice() - request.getDownPayment();
+        double downPayment = request.getDownPayment();
+        double loanAmount = request.getHomePrice() - downPayment;
         double monthlyInterestRate = request.getInterestRate() / 100 / 12;
         int numberOfPayments = request.getLoanTermYears() * 12;
 
@@ -24,6 +25,7 @@ public class MortgageCalculatorService {
         double totalMonthlyPayment = monthlyPrincipalAndInterest + monthlyPmi + monthlyPropertyTax + monthlyHomeInsurance + monthlyHoa;
 
         return new MortgageResponse(
+                downPayment,
                 loanAmount,
                 monthlyPrincipalAndInterest,
                 monthlyPmi,
