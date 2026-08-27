@@ -17,19 +17,19 @@ public class MortgageCalculatorService {
             / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
 
         double monthlyPmi = (loanAmount * (request.getPmiRate() / 100)) / 12;
-        double propertyTaxPerMonth = request.getPropertyTaxPerYear() / 12;
-        double homeInsurancePerMonth = request.getHomeInsurancePerYear() / 12;
-        double hoaPerMonth = request.getHoaPerMonth();
+        double monthlyPropertyTax = request.getYearlyPropertyTax() / 12;
+        double monthlyHomeInsurance = request.yearlyHomeInsurance() / 12;
+        double monthlyHoa = request.monthlyHoa();
 
-        double totalMonthlyPayment = monthlyPrincipalAndInterest + monthlyPmi + propertyTaxPerMonth + homeInsurancePerMonth + hoaPerMonth;
+        double totalMonthlyPayment = monthlyPrincipalAndInterest + monthlyPmi + monthlyPropertyTax + monthlyHomeInsurance + monthlyHoa;
 
         return new MortgageResponse(
                 loanAmount,
                 monthlyPrincipalAndInterest,
                 monthlyPmi,
-                propertyTaxPerMonth,
-                homeInsurancePerMonth,
-                hoaPerMonth,
+                monthlyPropertyTax,
+                monthlyHomeInsurance,
+                monthlyHoa,
                 totalMonthlyPayment
         );
     }

@@ -41,9 +41,9 @@ class MortgageCalculatorServiceTest {
         request.setInterestRate(6.5);
         request.setLoanTermYears(30);
         request.setPmiRate(2);
-        request.setHomeInsurancePerYear(5000);
-        request.setPropertyTaxPerYear(12000);
-        request.setHoaPerMonth(400);
+        request.setYearlyHomeInsurance(5000);
+        request.setYearlyPropertyTax(12000);
+        request.setMonthlyHoa(400);
 
         MortgageCalculatorService service = new MortgageCalculatorService();
 
@@ -54,9 +54,9 @@ class MortgageCalculatorServiceTest {
         assertEquals(450000, response.loanAmount());
         assertEquals(2844.31, response.monthlyPrincipalAndInterest(), 0.01);
         assertEquals(750.00, response.monthlyPmi(), 0.01);
-        assertEquals(1000.00, response.propertyTaxPerMonth(), 0.01);
-        assertEquals(416.67, response.homeInsurancePerMonth(), 0.01);
-        assertEquals(400.00, response.hoaPerMonth(), 0.01);
+        assertEquals(1000.00, response.monthlyPropertyTax(), 0.01);
+        assertEquals(416.67, response.monthlyHomeInsurance(), 0.01);
+        assertEquals(400.00, response.monthlyHoa(), 0.01);
         assertEquals(5410.97, response.totalMonthlyPayment(), 0.01);
     }
 }

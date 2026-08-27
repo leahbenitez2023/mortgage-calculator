@@ -9,8 +9,8 @@ public class MortgageRequest {
 
     private double pmiRate = 0;
     private double propertyTaxPerYear = 0;
-    private double homeInsurancePerYear = 0;
-    private double hoaPerMonth = 0;
+    private double yearlyHomeInsurance = 0;
+    private double monthlyHoa = 0;
 
 
     public double getHomePrice() {
@@ -53,27 +53,27 @@ public class MortgageRequest {
         this.pmiRate = pmiRate;
     }
 
-    public double getPropertyTaxPerYear() {
+    public double getYearlyPropertyTax() {
         return propertyTaxPerYear;
     }
 
-    public void setPropertyTaxPerYear(double propertyTaxPerYear) {
-        this.propertyTaxPerYear = propertyTaxPerYear;
+    public void setYearlyPropertyTax(double yearlyPropertyTax) {
+        this.propertyTaxPerYear = yearlyPropertyTax;
     }
 
-    public double getHomeInsurancePerYear() {
-        return homeInsurancePerYear;
+    public double yearlyHomeInsurance() {
+        return yearlyHomeInsurance;
     }
 
-    public void setHomeInsurancePerYear(double homeInsurancePerYear) {
-        this.homeInsurancePerYear = homeInsurancePerYear;
+    public void setYearlyHomeInsurance(double yearlyHomeInsurance) {
+        this.yearlyHomeInsurance = yearlyHomeInsurance;
     }
 
-    public double getHoaPerMonth() {
-        return hoaPerMonth;
+    public double monthlyHoa() {
+        return monthlyHoa;
     }
 
-    public void setHoaPerMonth(double hoaPerMonth) {
-        this.hoaPerMonth = hoaPerMonth;
+    public void setMonthlyHoa(double monthlyHoa) {
+        this.monthlyHoa = monthlyHoa;
     }
 }
